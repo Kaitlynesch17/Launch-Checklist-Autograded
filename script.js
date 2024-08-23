@@ -1,6 +1,4 @@
-// Write your JavaScript code here!
 
-const { myFetch, formSubmission } = require("./scriptHelper");
 
 window.addEventListener("load", function() {
     const form = document.querySelector("form");
@@ -14,11 +12,11 @@ window.addEventListener("load", function() {
         let list = document.getElementById("faultyItems");
 
         if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
-            alert("Please fill out all fields");
+            window.alert("Please fill out all fields");
         } else if (validateInput(fuelLevel) === "Not a Number" || validateInput(cargoLevel) === "Not a Number") {
-            alert("These fields must be numerical values");
+            window.alert("These fields must be numerical values");
         } else if (validateInput(pilot) === "Is a Number" || validateInput(copilot) === "Is a Number") {
-            alert("These fields must be alphabetical characters only");
+            window.alert("These fields must be alphabetical characters only");
         }
 
     formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
