@@ -13,14 +13,16 @@ window.addEventListener("load", function() {
 
         if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
             window.alert("Please fill out all fields");
+
         } else if (validateInput(fuelLevel) === "Not a Number" || validateInput(cargoLevel) === "Not a Number") {
             window.alert("These fields must be numerical values");
+
         } else if (validateInput(pilot) === "Is a Number" || validateInput(copilot) === "Is a Number") {
             window.alert("These fields must be alphabetical characters only");
+        } else {
+           formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
         }
-
-    formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
-
+    
     })
     
 
